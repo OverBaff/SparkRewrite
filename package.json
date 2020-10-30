@@ -1,0 +1,25 @@
+{
+  "name": "spark",
+  "version": "0.0.1",
+  "description": "Discord bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RTXGalwet/Spark.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Galwet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RTXGalwet/Spark/issues"
+  },
+  "homepage": "https://github.com/RTXGalwet/Spark#readme",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}
