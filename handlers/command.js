@@ -7,7 +7,6 @@ module.exports = (client) => {
 				const command = require(`../commands/${dir}/${cmd}`);
 				client.commands.set(command.name, command);
 				console.log(`[LOG] Загружена команда ${command.name}.`);
-				console.log(`[LOG] Загружено ${client.commands.size} команд.`);
 
 			}
 			catch (error) {

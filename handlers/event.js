@@ -13,5 +13,4 @@ module.exports = (client) => {
 			console.error(`[ERROR] Произошла ошибка во время загрузки ивента.\n ${error}`);
 		}
 	}
-	console.log('[LOG] Загрузчик ивентов завершил свою работу.');
 };
