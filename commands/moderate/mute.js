@@ -14,6 +14,7 @@ module.exports = {
 		const time = args[1];
 		let reason = args.slice(2).join(' ');
 		if(!user) return message.channel.send('Пользователь не найден.');
+		if(user.id == message.member.id) return message.channel.send('Ты не можешь замутить самого себя!');
 		if(!time) return message.channel.send('Укажите время мута.');
 		if(!ms(time)) return message.channel.send('Укажите время в правильном формате.\n s - секунды, m - минуты, h - часы, d - дни.');
 		if(ms(time) <= 60000) return message.channel.send('Время мута должно быть больше 1 минуты');

@@ -4,6 +4,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
 	name: 'server',
+	public: true,
 	run: async (message, args, client) => {
 		const regionServer = {
 			'brazil': ':flag_br: Бразилия',

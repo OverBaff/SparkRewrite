@@ -3,6 +3,8 @@ module.exports = {
 	aliases: ['purge'],
 	clientPermision: ['MANAGE_MESSAGES'],
 	permision: ['MANAGE_MESSAGES'],
+	public: true,
+	args: true,
 	run: async (message, args) => {
 		const number = parseInt(args[0]);
 		if(!number || Number(number)) return message.channel.send('Укажите число!');

@@ -1,6 +1,7 @@
 const { MessageEmbed } = require('discord.js');
 module.exports = {
 	name: 'ping',
+	public: true,
 	run: (message, args, client) => {
 		const pingEmbed = new MessageEmbed()
 			.setTitle(':ping_pong:Пинг')

@@ -8,6 +8,7 @@ const db = lowdb(adapter);
 module.exports = {
 	name: 'stats',
 	aliases: ['stat', 'bot-stats'],
+	public: true,
 	run: async (message, args, client) => {
 		const statEmbed = new MessageEmbed()
 			.setTitle(`Статистика бота ${client.user.username}`)

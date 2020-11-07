@@ -7,11 +7,12 @@ const db = lowdb(adapter);
 db.defaults({ commandUsedCount: 0 });
 
 module.exports = async (client, message) => {
+	if(message.channel.type === 'dm') return;
 	const guild = await Guild.findOne({ _id: message.guild.id });
 	if(!guild) Guild.create({ _id: message.guild.id });
 
-	if(message.mentions.has(client.user)) return message.channel.send(`Мой префикс на данном сервере: \`${guild.prefix}\`	`);
 	if(message.author.bot) return;
+	if(message.content.startsWith(`<@!${client.user.id}>` || `<@${client.user.id}>`)) return message.channel.send(`Мой префикс на данном сервере \`${guild.prefix}\``);
 
 	const args = message.content.slice(guild.prefix.length).trim().split(/ +/);
 	const cmdName = args.shift().toLowerCase();
