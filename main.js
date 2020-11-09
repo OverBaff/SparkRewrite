@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const mongoose = require('mongoose');
 client.commands = new Discord.Collection();
+client.modules = new Discord.Collection();
 
 try {
 	mongoose.connect('mongodb://localhost:2000/discord', { useNewUrlParser: true, useUnifiedTopology: true });

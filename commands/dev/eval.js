@@ -2,7 +2,10 @@ const { MessageEmbed } = require('discord.js');
 const humanize = require('humanize-duration');
 module.exports = {
 	name: 'eval',
+	description: 'позволяет выполнить js код',
+	usage: 'eval <code>',
 	public: false,
+	args: true,
 	run: async (message, args, client) => {
 		const code = args.join(' ');
 		await message.react(client.emojis.cache.get('751470748765388860'));

@@ -3,6 +3,8 @@ module.exports = {
 	clientPermision: ['KICK_MEMBER'],
 	permision: ['KICK_MEMBER'],
 	public: true,
+	description: 'позволяет кикнуть участника сервера',
+	usage: 'kick <user>',
 	args: true,
 	run: async (message, args) => {
 		const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);

@@ -3,6 +3,8 @@ const fetch = require('node-fetch');
 module.exports = {
 	name: 'mc',
 	aliases: ['mc-server', 'mcinfo'],
+	description: 'позволяет найти информацию про сервер майнкрафт',
+	usage: 'mc <ip>',
 	public: true,
 	args: true,
 	run: async (message, args) => {

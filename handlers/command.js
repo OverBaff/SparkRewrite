@@ -5,6 +5,7 @@ module.exports = (client) => {
 		readdirSync(`./commands/${dir}/`).map((cmd) => {
 			try {
 				const command = require(`../commands/${dir}/${cmd}`);
+				client.modules.set(command.name, dir);
 				client.commands.set(command.name, command);
 				console.log(`[LOG] Загружена команда ${command.name}.`);
 

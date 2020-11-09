@@ -3,14 +3,15 @@ module.exports = {
 	aliases: ['purge'],
 	clientPermision: ['MANAGE_MESSAGES'],
 	permision: ['MANAGE_MESSAGES'],
+	description: 'позволяет очистить сообщения в текущем канале',
+	usage: 'clear <message-count>',
 	public: true,
 	args: true,
 	run: async (message, args) => {
-		const number = parseInt(args[0]);
-		if(!number || Number(number)) return message.channel.send('Укажите число!');
-		if(number <= 2 || number >= 100) return message.channel.send('Укажите число в диапазоне от 2 до 100.');
+		if(!Number(args[0])) return message.channel.send('Укажите число!');
+		if(args[0] <= 2 || args[0] >= 100) return message.channel.send('Укажите число в диапазоне от 2 до 100.');
 		message.delete();
-		message.channel.bulkDelete(number, true); message.channel.send(`Успешно удалил ${number} сообщений!`).then(m => m.delete({ timeout: 5000 }));
+		message.channel.bulkDelete(args[0], true); message.channel.send(`Успешно удалил ${args[0]} сообщений!`).then(m => m.delete({ timeout: 5000 }));
 	},
 
 };

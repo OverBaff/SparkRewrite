@@ -3,6 +3,8 @@ module.exports = {
 	clientPermision: ['BAN_MEMBERS'],
 	permision: ['BAN_MEMBERS'],
 	public: true,
+	description: 'позволяет получить забанить участника сервера',
+	usage: 'ban <user>',
 	args: true,
 	run: async (message, args) => {
 		const user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);

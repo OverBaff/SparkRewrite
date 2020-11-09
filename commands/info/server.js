@@ -4,6 +4,8 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
 	name: 'server',
+	description: 'позволяет получить статистику сервера',
+	usage: 'server',
 	public: true,
 	run: async (message, args, client) => {
 		const regionServer = {
