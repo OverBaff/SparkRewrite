@@ -1,9 +1,9 @@
 module.exports = {
-	name: 'mute',
+	name: 'unmute',
 	clientPermision: ['MANAGE_ROLES', 'MANAGE_CHANNELS'],
 	permision: ['MANAGE_ROLES', 'MANAGE_CHANNELS'],
-	description: 'позволяет замутить участника сервера',
-	usage: 'mute <user> <time> <reason>',
+	description: 'позволяет размутить участника сервера',
+	usage: 'unmute <user>',
 	public: true,
 	args: true,
 	run: async (message, args) => {

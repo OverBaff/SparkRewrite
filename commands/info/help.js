@@ -28,9 +28,9 @@ module.exports = {
 			};
 
 			const pages = {
-				1: new MessageEmbed().setTitle('Модерация').setDescription('`ban`, `clear`, `kick`, `mute`, `unmute`').setFooter('Количество комманд: 6 | Страница: 1').setColor('#F3FF00'),
-				2: new MessageEmbed().setTitle('Информационые').setDescription('`help`, `ping`, `server`, `stats`').setFooter('Количество команд: 4 | Страница: 2').setColor('#F3FF00'),
-				3: new MessageEmbed().setTitle('Утилиты').setDescription('`docs`, `mc`').setFooter('Количество команд: 2 | Страница: 3').setColor('#F3FF00'),
+				1: new MessageEmbed().setTitle('Модерация').setDescription('`ban`, `clear`, `kick`, `mute`, `unban`, `unmute`').setFooter('Количество комманд: 6 | Страница: 1').setColor('#F3FF00'),
+				2: new MessageEmbed().setTitle('Информационые').setDescription('`help`, `ping`, `server`, `stats`, `user`').setFooter('Количество команд: 5 | Страница: 2').setColor('#F3FF00'),
+				3: new MessageEmbed().setTitle('Утилиты').setDescription('`docs`, `mc`, `calc`, `remind`').setFooter('Количество команд: 2 | Страница: 3').setColor('#F3FF00'),
 				4: new MessageEmbed().setTitle('Для разработчиков').setDescription('`eval`, `reload`').setFooter('Количество команд: 2 | Страница: 4').setColor('#F3FF00'),
 			};
 
