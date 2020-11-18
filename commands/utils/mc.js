@@ -14,7 +14,7 @@ module.exports = {
 		const { ip, port, version, hostname, online = 'Неизвестно', players } = await fetch(`https://api.mcsrvstat.us/2/${ipServer}`).then(response => response.json());
 		const mcEmbed = new MessageEmbed()
 			.setTitle('Информация о сервере майнкрафт')
-			.setColor('#F3FF00')
+			.setColor('')
 			.setFooter(ipServer)
 			.setTimestamp()
 			.setDescription(`IP: **${ip || 'Неизвестно'}:${port || 'Неизвестно'}**\nHostname: **${hostname || 'Неизвестно'}**\n Версия: **${version || 'Неизвестно'}**\nЗапущен: **${online ? 'Сервер запщуен' : 'Сервер выключен'}**\nОнлайн: **${players.online || 'Неизвестно'}/${players.max || 'Неизвестно'}**`);

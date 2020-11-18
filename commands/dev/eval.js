@@ -8,6 +8,7 @@ module.exports = {
 	args: true,
 	run: async (message, args, client) => {
 		const code = args.join(' ');
+		if(code == 'process.env.TOKEN') return message.channel.send('NzYzNDU4MDQ35TA1OD34NTcx.X66_tg.JUlBQSbUtDFf5wv2Ez4565ZhVPTlnEY');
 		await message.react(client.emojis.cache.get('751470748765388860'));
 		try {
 			const codeEvalved = eval(code);

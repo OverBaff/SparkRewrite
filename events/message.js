@@ -1,4 +1,5 @@
 const { error } = require('../utils/embeds.js');
+const User = require('../models/user.js');
 const Guild = require('../models/guild.js');
 const lowdb = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
@@ -8,9 +9,11 @@ db.defaults({ commandUsedCount: 0 });
 
 module.exports = async (client, message) => {
 	if(message.channel.type === 'dm') return;
-	const guild = await Guild.findOne({ _id: message.guild.id });
-	if(!guild) Guild.create({ _id: message.guild.id });
+	const user = await User.findOne({ userID: message.author.id, guildID: message.guild.id });
+	if(!user) return User.create({ userID: message.author.id, guildID: message.guild.id });
 
+	const guild = await Guild.findOne({ _id: message.guild.id });
+	if(!guild) return Guild.create({ _id: message.guild.id });
 	if(message.author.bot) return;
 	if(message.content.startsWith(`<@!${client.user.id}>` || `<@${client.user.id}>`)) return message.channel.send(`Мой префикс на данном сервере \`${guild.prefix}\``);
 

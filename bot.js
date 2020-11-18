@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const mongoose = require('mongoose');
 client.commands = new Discord.Collection();
+require('dotenv').config();
 client.modules = new Discord.Collection();
 
 try {
@@ -17,4 +18,4 @@ mongoose.connection.on('connected', ()=>{
 require('./handlers/command')(client);
 require('./handlers/event')(client);
 
-client.login(require('./config.json').token);
+client.login(process.env.TOKEN);

@@ -42,7 +42,7 @@ module.exports = {
 			msg.react('⏩');
 			const reactionCollector = msg.createReactionCollector(filter, { max: Infinity, maxEmojis: Infinity, idle: 15000, errors: ['time'] });
 			reactionCollector.on('collect', reaction => {
-				reaction.users.remove(message.author);
+				if(message.guild.me.hasPermission('MANAGE_MESSAGES')) reaction.users.remove(message.author);
 				if(reaction.emoji.name === '⏩') {
 					msg.edit({ embed: pages[options.max] });
 				}
