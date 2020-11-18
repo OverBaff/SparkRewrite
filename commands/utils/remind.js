@@ -18,7 +18,7 @@ module.exports = {
 		const remindEmbed = new MessageEmbed()
 			.setTitle('Напоминание')
 			.setDescription(`\`\`\`${remind}\`\`\``)
-			.setColor('#F3FF00')
+			.setColor('process.env.COLOR')
 			.setFooter(message.author.id)
 			.setTimestamp();
 		setTimeout(() => {

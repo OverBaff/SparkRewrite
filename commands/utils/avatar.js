@@ -10,7 +10,7 @@ module.exports = {
 			.setTitle(`Аватар ${user.username}`)
 			.setDescription(`[png](${user.displayAvatarURL({ size: 2048, dynamic: true, format: 'png' })}) [webp](${user.displayAvatarURL({ size: 2048, dynamic: true, format: 'webp' })})`)
 			.setImage(user.displayAvatarURL({ size: 2048, dynamic: true, format: 'png' }))
-			.setColor('#F3FF00')
+			.setColor('process.env.COLOR')
 			.setTimestamp();
 		message.channel.send(avatarEmbed);
 	},

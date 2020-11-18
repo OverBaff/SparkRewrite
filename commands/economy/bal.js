@@ -12,7 +12,7 @@ module.exports = {
 		const balEmbed = new MessageEmbed()
 			.setTitle('Баланс')
 			.setDescription(`На руках: **${userDB.balance}**\nВ банке: **${userDB.bankBalance}**`)
-			.setColor('#F3FF00')
+			.setColor(process.env.COLOR)
 			.setTimestamp();
 		message.channel.send(balEmbed);
 	},

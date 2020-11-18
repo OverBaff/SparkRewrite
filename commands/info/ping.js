@@ -7,7 +7,7 @@ module.exports = {
 	run: (message, args, client) => {
 		const pingEmbed = new MessageEmbed()
 			.setTitle(':ping_pong:Пинг')
-			.setColor('#F3FF00')
+			.setColor(process.env.COLOR)
 			.setDescription(`Websocket: \`${client.ws.ping}\`ms`)
 			.setFooter(client.user.username, client.user.displayAvatarURL())
 			.setTimestamp();

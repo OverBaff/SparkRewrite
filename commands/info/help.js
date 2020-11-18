@@ -12,7 +12,7 @@ module.exports = {
 			const commandEmbed = new MessageEmbed()
 				.setTitle(`Информация про команду ${command.name}`)
 				.setDescription(`Описание команды: **${command.description}**\nПример использования: **${command.usage}**\nАлиасисы(дополнительная форма написания команды): **${command.aliases || 'Не указано'}**\nПрава требуемые для выполнения команды: **${command.permision || 'Не указано'}**\nПрава требуемые боту для выполнения команды: **${command.clientPermision || 'Не указано'}**`)
-				.setColor('#F3FF00')
+				.setColor('process.env.COLOR')
 				.setFooter(command.name)
 				.setTimestamp();
 			message.channel.send(commandEmbed);
@@ -28,10 +28,10 @@ module.exports = {
 			};
 
 			const pages = {
-				1: new MessageEmbed().setTitle('Модерация').setDescription('`ban`, `clear`, `kick`, `mute`, `unban`, `unmute`').setFooter('Количество комманд: 6 | Страница: 1').setColor('#F3FF00'),
-				2: new MessageEmbed().setTitle('Информационые').setDescription('`help`, `ping`, `server`, `stats`, `user`').setFooter('Количество команд: 5 | Страница: 2').setColor('#F3FF00'),
-				3: new MessageEmbed().setTitle('Утилиты').setDescription('`docs`, `mc`, `calc`, `remind`').setFooter('Количество команд: 2 | Страница: 3').setColor('#F3FF00'),
-				4: new MessageEmbed().setTitle('Для разработчиков').setDescription('`eval`, `reload`').setFooter('Количество команд: 2 | Страница: 4').setColor('#F3FF00'),
+				1: new MessageEmbed().setTitle('Модерация').setDescription('`ban`, `clear`, `kick`, `mute`, `unban`, `unmute`').setFooter('Количество комманд: 6 | Страница: 1').setColor('process.env.COLOR'),
+				2: new MessageEmbed().setTitle('Информационые').setDescription('`help`, `ping`, `server`, `stats`, `user`').setFooter('Количество команд: 5 | Страница: 2').setColor('process.env.COLOR'),
+				3: new MessageEmbed().setTitle('Утилиты').setDescription('`docs`, `mc`, `calc`, `remind`').setFooter('Количество команд: 2 | Страница: 3').setColor('process.env.COLOR'),
+				4: new MessageEmbed().setTitle('Для разработчиков').setDescription('`eval`, `reload`').setFooter('Количество команд: 2 | Страница: 4').setColor('process.env.COLOR'),
 			};
 
 			const msg = await message.channel.send({ embed: pages[options.page] });

@@ -19,7 +19,7 @@ module.exports = {
 		const userEmbed = new MessageEmbed()
 			.setTitle(`Информация про пользователя ${user.displayName}`)
 			.setDescription(`Тег: **${user.user.tag}**\nСоздан: **${moment(user.user.createdAt).format('LL')} (${(moment(user.user.createdAt, 'YYYYMMDD').fromNow())})**\nПрисоединился: **${moment(user.joinedAt).format('LL')} (${moment(user.joinedAt, 'YYYYMMDD').fromNow()})**\nСтатус: **${Map[message.author.presence.status]}**`)
-			.setColor('#F3FF00')
+			.setColor('process.env.COLOR')
 			.setThumbnail(user.user.displayAvatarURL({ dynamic: true }))
 			.setFooter(message.guild.id)
 			.setTimestamp();

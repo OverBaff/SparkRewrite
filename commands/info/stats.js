@@ -14,7 +14,7 @@ module.exports = {
 	run: async (message, args, client) => {
 		const statEmbed = new MessageEmbed()
 			.setTitle(`Статистика бота ${client.user.username}`)
-			.setColor('#F3FF00')
+			.setColor(process.env.COLOR)
 			.setTimestamp()
 			.setFooter(client.user.username, client.user.displayAvatarURL())
 			.setThumbnail(client.user.displayAvatarURL())
