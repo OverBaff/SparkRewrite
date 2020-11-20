@@ -24,7 +24,7 @@ module.exports = async (client, message) => {
 
 	if(!command.public && message.author.id != '724335588635050014') return;
 	if(command.clientPermision && !message.guild.me.hasPermission(command.clientPermision)) return message.channel.send('У бота недостаточно **прав** для выполнения этой **команды**! :angry:');
-	if(command.permision && !message.member.hasPermission(command.permision)) return message.channel.send('У вас недостаточно **прав** для использования этой **команды**! :angry:');
+	if(command.permission && !message.member.hasPermission(command.permission)) return message.channel.send('У вас недостаточно **прав** для использования этой **команды**! :angry:');
 	if(command.args && !args.length) return message.channel.send('Вы не указали аргументы.');
 
 	try {

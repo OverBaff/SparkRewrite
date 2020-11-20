@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'ban',
 	clientPermision: ['BAN_MEMBERS'],
-	permision: ['BAN_MEMBERS'],
+	permission: ['BAN_MEMBERS'],
 	public: true,
 	description: 'позволяет получить забанить участника сервера',
 	usage: 'ban <user>',

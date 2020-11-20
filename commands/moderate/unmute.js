@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'unmute',
 	clientPermision: ['MANAGE_ROLES', 'MANAGE_CHANNELS'],
-	permision: ['MANAGE_ROLES', 'MANAGE_CHANNELS'],
+	permission: ['MANAGE_ROLES', 'MANAGE_CHANNELS'],
 	description: 'позволяет размутить участника сервера',
 	usage: 'unmute <user>',
 	public: true,

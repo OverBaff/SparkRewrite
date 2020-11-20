@@ -2,7 +2,7 @@ module.exports = {
 	name: 'clear',
 	aliases: ['purge'],
 	clientPermision: ['MANAGE_MESSAGES'],
-	permision: ['MANAGE_MESSAGES'],
+	permission: ['MANAGE_MESSAGES'],
 	description: 'позволяет очистить сообщения в текущем канале',
 	usage: 'clear <message-count>',
 	public: true,

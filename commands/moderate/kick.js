@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'kick',
 	clientPermision: ['KICK_MEMBER'],
-	permision: ['KICK_MEMBER'],
+	permission: ['KICK_MEMBER'],
 	public: true,
 	description: 'позволяет кикнуть участника сервера',
 	usage: 'kick <user>',
