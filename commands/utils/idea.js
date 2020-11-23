@@ -4,6 +4,6 @@ module.exports = {
 	args: true,
 	public: true,
 	run: async (message, args) => {
-        
+        test
 	},
 };
