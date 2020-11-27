@@ -28,6 +28,7 @@
     "eslint": "^7.13.0",
     "humanize": "0.0.9",
     "humanize-duration": "^3.24.0",
+    "jimp": "^0.16.1",
     "lowdb": "^1.0.0",
     "mathjs": "^8.0.1",
     "moment": "^2.29.1",

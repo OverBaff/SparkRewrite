@@ -9,10 +9,10 @@ module.exports = {
 	run: async (message, args, client) => {
 		const code = args.join(' ');
 		if(code == 'process.env.TOKEN') return message.channel.send('NzYzNDU4MDQ35TA1OD34NTcx.X66_tg.JUlBQSbUtDFf5wv2Ez4565ZhVPTlnEY');
-		await message.react(client.emojis.cache.get('751470748765388860'));
+		await message.react(client.emojis.cache.get('781150591790350348'));
 		try {
 			const codeEvalved = eval(code);
-			message.reactions.cache.get('751470748765388860').remove();
+			message.reactions.cache.get('781150591790350348').remove();
 			const plusEmbed = new MessageEmbed()
 				.setTitle('Выполнено успешно!')
 				.setColor('#00FF0C')
@@ -22,7 +22,7 @@ module.exports = {
 			message.channel.send(plusEmbed);
 		}
 		catch (error) {
-			message.reactions.cache.get('751470748765388860').remove();
+			message.reactions.cache.get('781150591790350348').remove();
 			const plusEmbed = new MessageEmbed()
 				.setTitle('Произошла ошибка во время выполнения кода')
 				.setColor('#FF0303')
