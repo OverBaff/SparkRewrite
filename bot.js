@@ -6,7 +6,7 @@ require('dotenv').config();
 client.modules = new Discord.Collection();
 
 try {
-	mongoose.connect('mongodb://localhost:2000/discord', { useNewUrlParser: true, useUnifiedTopology: true });
+	mongoose.connect('mongodb+srv://Galwet:Galwet@sparksandbox.ihqty.mongodb.net/Discord?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 }
 catch (error) {
 	console.log(`[Error] Не удалось подключиться к базе данных.\n${error}`);
