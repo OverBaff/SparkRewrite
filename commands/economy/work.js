@@ -12,7 +12,7 @@ module.exports = {
 		const guild = await Guild.findOne({ _id: message.guild.id });
 		const random = Math.floor(Math.random() * (350 - 50 + 50)) + 50;
 		let item = guild.workphrases[Math.floor(Math.random() * guild.workphrases.length)];
-		item = item.replace('{coin.count}', random); item = item.replace('{coin}', 'Добавь меня!');
+		item = item.replace('{coin.count}', random); item = item.replace('{coin}', guild.coin);
 		user.work = Date.now(); user.balance += random; user.save();
 		const workEmbed = new MessageEmbed()
 			.setTitle('Работа!')
