@@ -1,4 +1,4 @@
-const Idea = require('../../models/idea');
+const Idea = require('../../models/shop');
 module.exports = {
 	name: 'Idea',
 	args: true,
